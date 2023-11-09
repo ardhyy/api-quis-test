@@ -89,3 +89,40 @@ Delete Product
 URL: /api/products/{id}
 Method: DELETE
 ```
+
+# payment method endpoint
+
+Get Payment Method
+
+```
+URL: /api/payment-method
+Method: GET
+```
+
+Get Payment Method by ID
+
+```
+URL: /api/payment-method/{id}
+Method: GET
+```
+
+Create Payment Method
+
+```
+URL: /api/payment-method
+Method: POST
+```
+
+Update Payment Method
+
+```
+URL: /api/payment-method/{id}
+Method: POST
+```
+
+Delete Payment Method
+
+```
+URL: /api/payment-method/{id}
+Method: DELETE
+```

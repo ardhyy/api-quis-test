@@ -17,6 +17,8 @@ class PaymentsMethodModel extends Model
         'account_holder',
     ];
 
+    public $timestamps = false;
+
     public function sales()
     {
         return $this->hasMany(SalesModel::class, 'payment', 'id');
