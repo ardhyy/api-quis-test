@@ -25,7 +25,7 @@ class UsersTokenSeeders extends Seeder
             'email' => $faker->unique()->email(),
             'password' => Hash::make('password123'),
             'created_at' => now(),
-            'token' => Token::create(['token' => hash('md5', Str::random(15))])->id,
+            'token' => Token::create(['token' => 'client-' . hash('md5', Str::random(15))])->id,
         ]);
     }
 }

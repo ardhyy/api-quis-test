@@ -17,6 +17,8 @@ class ProductsVariantModel extends Model
         'additional_price',
     ];
 
+    public $timestamps = false;
+
     public function product()
     {
         return $this->belongsTo(ProductsModel::class, 'products', 'id');

@@ -17,4 +17,6 @@ class InventoriesModel extends Model
         'amount',
         'unit',
     ];
+
+    public $timestamps = false;
 }

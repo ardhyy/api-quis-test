@@ -17,6 +17,8 @@ class ProductsModel extends Model
         'price',
     ];
 
+    public $timestamps = false;
+
     public function variants()
     {
         return $this->hasMany(ProductsVariantModel::class, 'products', 'id');
