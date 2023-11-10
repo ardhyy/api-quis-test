@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\InventoriesController as Inventories;
 use App\Http\Controllers\ProductsController as Products;
 use App\Http\Controllers\PaymentMethodController as Payment;
+use App\Http\Controllers\SalesController as Sales;
 
 Route::middleware('api.key')->group(function () {
     // route api inventories
@@ -26,4 +27,9 @@ Route::middleware('api.key')->group(function () {
     Route::post('/payment-method', [Payment::class, 'store']);
     Route::post('/payment-method/{id}', [Payment::class, 'update']);
     Route::delete('/payment-method/{id}', [Payment::class, 'destroy']);
+
+    // route api sales
+    Route::get('/sales', [Sales::class, 'index']);
+    Route::get('/sales/{id}', [Sales::class, 'show']);
+    Route::post('/sales', [Sales::class, 'store']);
 });

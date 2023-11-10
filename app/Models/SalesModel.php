@@ -10,7 +10,8 @@ class SalesModel extends Model
     use HasFactory;
 
     protected $table = 'sales';
-
+    protected $primaryKey = 'id';
+    public $incrementing = false;
     protected $fillable = [
         'id',
         'total_price',
@@ -24,6 +25,6 @@ class SalesModel extends Model
 
     public function cart()
     {
-        return $this->hasOne(Cart::class, 'sales_id', 'id');
+        return $this->hasOne(CartModel::class, 'sales_id', 'id');
     }
 }

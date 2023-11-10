@@ -60,7 +60,7 @@ class ProductsController extends Controller
                 'id' => $product->id,
                 'name' => $product->name,
                 'description' => $product->desc,
-                'price' => 'Rp ' . number_format($product->price, 0, ',', '.'),
+                'price' => number_format($product->price, 0, ',', '.'),
                 'variants' => $variants,
             ];
 

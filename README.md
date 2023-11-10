@@ -126,3 +126,62 @@ Delete Payment Method
 URL: /api/payment-method/{id}
 Method: DELETE
 ```
+
+# sales endpoint
+
+Get Sales
+
+```
+URL: /api/sales
+Method: GET
+```
+
+Get Sale by ID
+
+```
+URL: /api/sales/{id}
+Method: GET
+```
+
+Create Sale
+
+```
+URL: /api/sales
+Method: POST
+```
+
+# example post data
+
+Example input data Products
+
+```
+{
+    "name": "Chocolate Lava Cake",
+    "desc": "Decadent chocolate lava cake with a gooey center",
+    "price": 60000,
+    "variants": [
+        {"name": "classic", "additional_price": 0},
+        {"name": "vanilla ice cream", "additional_price": 15000},
+        {"name": "caramel drizzle", "additional_price": 10000}
+    ]
+}
+```
+
+Example input data Sales
+
+```
+{
+    "payment": "shopee",
+    "cart": [
+        {
+            "product_id": 2,
+            "price": 50000,
+            "variants": ["chicken"]
+        },
+        {
+            "product_id": 7,
+            "price": 60000
+        }
+    ]
+}
+```

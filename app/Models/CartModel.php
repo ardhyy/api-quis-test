@@ -15,8 +15,9 @@ class CartModel extends Model
         'sales_id',
         'products_id',
         'price',
-        'variants_id',
     ];
+
+    public $timestamps = false;
 
     public function sale()
     {
@@ -28,8 +29,8 @@ class CartModel extends Model
         return $this->belongsTo(ProductsModel::class, 'products_id', 'id');
     }
 
-    public function variant()
+    public function variants()
     {
-        return $this->belongsTo(ProductsVariantModel::class, 'variants_id', 'id');
+        return $this->belongsToMany(ProductsVariantModel::class, 'cart_variant_products', 'cart_id', 'variant_products_id');
     }
 }
